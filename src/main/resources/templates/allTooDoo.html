@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TooDoo</title>
+</head>
+<body>
+    <h1>All posts</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Заголовок</th>
+            <th>Текст</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="post : ${allPosts}">
+                <td th:text="${post.id}"></td>
+                <td th:text="${post.title}"></td>
+                <td th:text="${post.message}"></td>
+             </tr>
+        </tbody>
+    </table>
+</body>
+</html>
